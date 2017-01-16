@@ -1,0 +1,60 @@
+body {
+    font-family: 'Share Tech Mono', monospace;
+}
+
+#button-space {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+button, #submit {
+    font-family: 'Share Tech Mono', monospace;
+    border-style: solid;
+    border-color: rgb(232,232,232);
+    background-color: rgb(255,255,255);
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+button:active, #submit:active {
+    position: relative;
+    top: 2px;
+}
+
+#button-name {
+    border-style: solid;
+    border-color: rgb(232,232,232);
+    border-width: 2px;
+}
+
+form {
+    text-align: center;
+}
+
+input {
+    margin-top: 4px;
+    margin-bottom: 20px;
+}
+
+#results {
+    margin: auto;
+}
+
+.response {
+    margin-bottom: 20px;
+    float: left;
+}
+
+.gif {
+    margin: 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    padding-bottom: 0px;
+}
+
+.rating {
+    text-align: center;
+}
+

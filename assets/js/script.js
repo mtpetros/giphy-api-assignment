@@ -12,24 +12,25 @@ buttonAppend();
 
 $("#button-space").on("click", "button", function() {
 
+
     var queryTerm = $(this).text();
-    var queryUrl = 'http://api.giphy.com/v1/gifs/search?q=' + queryTerm + '&limit=100&rating=g&api_key=dc6zaTOxFJmzC'
+    var rand = Math.floor(Math.random() * 100);
+    var queryUrl = 'http://api.giphy.com/v1/gifs/search?q=' + queryTerm + '&limit=10&rating=g&offset=' + rand +'&api_key=dc6zaTOxFJmzC'
 
     $.ajax({
         url: queryUrl,
         method: "GET"
     })
 
-    .done(function(results) {
-        var rand = Math.floor(Math.random() * 90);
-        for (var i = rand; i < (rand + 10); i++) {
+    .done(function(results) {        
+        for (var i = 0; i < (results.data.length); i++) {
 
             var imgStill = results.data[i].images.original_still.url;
             var imgAnimate = results.data[i].images.original.url;
             var imgTag = '<img src="' + imgStill + '" data-still="' + imgStill + '" data-animate="' + imgAnimate + '" data-state="still" class="gif">';
-            var image = '<div id="image">' + imgTag + '</div>';
-            var rating = '<div id="rating"><p> Rating: ' + results.data[i].rating.toUpperCase() + '</p></div>';
-            var response = '<div id="response">' + image + rating + '</div>';
+            //var image = '<div class="image">' + imgTag + '</div>';
+            var rating = '<div class="rating"><p> Rating: ' + results.data[i].rating.toUpperCase() + '</p></div>';
+            var response = '<div class="response">' + imgTag + rating + '</div>';
             $("#results").append(response);
         }
 
