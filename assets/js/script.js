@@ -15,7 +15,7 @@ $("#button-space").on("click", "button", function() {
 
     var queryTerm = $(this).text();
     var rand = Math.floor(Math.random() * 100);
-    var queryUrl = 'http://api.giphy.com/v1/gifs/search?q=' + queryTerm + '&limit=10&rating=g&offset=' + rand +'&api_key=dc6zaTOxFJmzC'
+    var queryUrl = 'https://api.giphy.com/v1/gifs/search?q=' + queryTerm + '&limit=10&rating=g&offset=' + rand +'&api_key=dc6zaTOxFJmzC'
 
     $.ajax({
         url: queryUrl,
