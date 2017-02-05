@@ -28,7 +28,6 @@ $("#button-space").on("click", "button", function() {
             var imgStill = results.data[i].images.original_still.url;
             var imgAnimate = results.data[i].images.original.url;
             var imgTag = '<img src="' + imgStill + '" data-still="' + imgStill + '" data-animate="' + imgAnimate + '" data-state="still" class="gif">';
-            //var image = '<div class="image">' + imgTag + '</div>';
             var rating = '<div class="rating"><p> Rating: ' + results.data[i].rating.toUpperCase() + '</p></div>';
             var response = '<div class="response">' + imgTag + rating + '</div>';
             $("#results").append(response);
